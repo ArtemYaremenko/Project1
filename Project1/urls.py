@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import vews
 
 urlpatterns = [
-    path('hello/' 'Hello, User')
     path('admin/', admin.site.urls),
+    path('about/', vews.about),
+    path('', vews.home),
 ]
